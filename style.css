@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #48eb36, #ffffff);
+  font-family: 'Roboto Mono', monospace;
+  color: #2e3d2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #2e3d2f;
+}
+
+#readBtn {
+  font-size: 1.2em;
+  padding: 12px 24px;
+  background-color: #ffffffaa;
+  color: #2e3d2f;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#readBtn:hover {
+  background-color: #e6ffe6;
+  transform: scale(1.05);
+}
+
+#messageBox {
+  display: none;
+  font-size: 1.2em;
+  max-width: 80%;
+  margin-top: 30px;
+  text-align: left;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  border-left: 4px solid #89c789;
+  padding-left: 15px;
+  background-color: #ffffffdd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 50, 0, 0.1);
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #89c789;
+  animation: blink 0.8s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* 🌸 Floating Flowers */
+.flower {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://emojicdn.elk.sh/🌸');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  animation: floatFlower linear infinite;
+}
+
+@keyframes floatFlower {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.floating-photo {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  animation: floatPhoto 8s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+
+.photo-left {
+  bottom: 40px;
+  left: 30px;
+}
+
+.photo-right {
+  top: 40px;
+  right: 30px;
+}
+
+@keyframes floatPhoto {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
